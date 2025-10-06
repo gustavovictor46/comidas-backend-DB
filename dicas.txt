@@ -1,0 +1,8 @@
+-> Inicializar o prisma
+npx prisma init --datasource-provider postgresql
+
+->Criar a versão do meu banco ou a famosa e famigerada migration
+npx prisma migrate dev --name init
+
+-> Aplico o banco de dados
+npm
