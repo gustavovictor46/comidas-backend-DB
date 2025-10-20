@@ -1,8 +1,10 @@
-const express = require('express');
-const comidaRoutes = require('./src/routes/comidaRoutes');
+import express from "express";
+import dotenv from "dotenv";
+import comidasRoutes from './src/routes/comidasRoutes.js'
 
 const app = express();
-const PORT = 3000;
+
+const serverPort = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -12,15 +14,12 @@ app.get('/', (req, res) => {
     endpoints: {
       listar: 'GET /comidas',
       buscar: 'GET /comidas/:id',
-      criar: 'POST /comidas',
-      atualizar: 'PUT /comidas/:id',
-      deletar: 'DELETE /comidas/:id'
     }
   });
 });
 
-app.use('/comidas', comidaRoutes);
+app.use('/comidas', comidasRoutes);
 
-app.listen(PORT, () => {
-  console.log(`🍕 API em http://localhost:${PORT}`);
+app.listen(serverPort, () => {
+  console.log(`🍕 API em http://localhost:${serverPort}`);
 });
