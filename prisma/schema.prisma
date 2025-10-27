@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model comidas {
+model Comidas {
   id        Int     @id @default(autoincrement())
   nome      String
   tipo      String

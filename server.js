@@ -4,7 +4,7 @@ import comidasRoutes from './src/routes/comidasRoutes.js'
 
 const app = express();
 
-const serverPort = process.env.PORT || 3000;
+const serverPort = process.env.PORT || 3001;
 
 app.use(express.json());
 
