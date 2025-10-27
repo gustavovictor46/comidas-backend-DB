@@ -99,7 +99,7 @@ export const deletar = async (req, res) => {
 
     res.status(200).json({
       mensagem: "Comida apagada com sucesso!",
-      comidaRemovido: comidaExiste
+      comidaRemovida: comidaExiste
     });
   } catch (error) {
     res.status(500).json({

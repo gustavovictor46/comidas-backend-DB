@@ -8,7 +8,7 @@ export const encontreTodas = async () => {
     });
 }
 
-export const encontreUma = async () => {
+export const encontreUma = async (id) => {
     return await prisma.comidas.findUnique({
         where: { id: Number(id)}
     })
